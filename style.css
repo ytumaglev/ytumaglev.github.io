@@ -7,8 +7,12 @@ body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #000000;
-	
- 	background: #D8D8D8;
+	 background-color: #ffffff;
+  	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#999999));
+  	background-image: -webkit-linear-gradient(top, #ffffff, #999999);
+  	background-image:    -moz-linear-gradient(top, #ffffff, #999999);
+  	background-image:      -o-linear-gradient(top, #ffffff, #999999);
+ 	 background-image:         linear-gradient(to bottom, #ffffff, #999999);
 
 }
 *
