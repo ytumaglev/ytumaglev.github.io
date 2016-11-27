@@ -171,8 +171,79 @@ a:hover
 color:#9B1313;
 border-bottom:dashed 1px #DD6A6A;
 }
-li
-{
-color :#9B1313;
+
+/* 共通設定 */
+.mainbox, .header, .footer{
+    width: 750px;
+    margin: 20px auto 20px auto;
+}
+
+/* ヘッダ関連の設定 */
+.header{
+    border-bottom: 0.5px solid black;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+}
+.logo{
+    display: block;
+    border: 0;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nav{
+    margin: 3px auto 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.nav li{
+    display: inline;
+}
+.nav li{
+    width: 100px;
+    height: 21px;
+    border-style:none;
+}
+
+/* フッタ関連の設定 */
+
+.footer{
+    border-top: 0.5px solid black;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* 箇条書きのスタイル変更 */
+ol, ul{
+    display: block;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* テーブルのスタイルの設定 */
+TABLE.table {
+	empty-cells: hide;
+
+}
+
+TABLE.table TH {
+	padding: 4px 12px;
+	margin: 2px;
+	background-color: #CCCCFF;
+}
+
+TABLE.table TD {
+	padding: 4px 12px;
+	margin: 2px;
+	background-color: #EEEEFF;
+}
+
+/* リンク画像から枠線の除去 */
+a>img{
+    border-style:none;
+}
+
+.centerize{
+    text-align: center;
 }
 
