@@ -13,34 +13,7 @@
     async defer></script>
      </head> 
      <body>
-    
-   <div id="googleMap" style="height:400px;width:100%;"> </div>
-
-<!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(40.995614,28.722629);
-
-function initialize() {
-var mapProp = {
-  center:myCenter,
-  zoom:12,
-  scrollwheel:false,
-  draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCOiJNIxO3NuMrods7t-A14k6kj4O16wfg'></script><div style='overflow:hidden;height:400px;width:520px;'><div id='gmap_canvas' style='height:400px;width:520px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://embedmaps.org/'>embedding google maps in website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=d374146dbbece11607cf6192cc25b01cf2013a18'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:11,center:new google.maps.LatLng(41.05288339944041,29.012832937850945),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(41.05288339944041,29.012832937850945)});infowindow = new google.maps.InfoWindow({content:'<strong>Yıldız Technical Universty</strong><br>Barbaros Bulvarı<br>34349 Beşiktaş/İstanbul<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
   </body>
 </html>
 
