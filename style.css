@@ -275,7 +275,7 @@ a>img{
 	box-shadow:1px 1px 5px rgba(0,0,0,0.7);
 	height:320px;
 	width:680px;
-	margin:10px auto 0;
+	margin:0px auto 0;
 	overflow:visible;
 	position:relative;
 }
