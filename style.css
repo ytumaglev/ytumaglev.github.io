@@ -255,9 +255,11 @@ a>img{
 
 /* LAYOUT */
 .container {
+	margin: 0;
+	padding: 0;
 	margin:0 auto;
 	overflow:hidden;
-	width:960px;
+	width:660px;
 }
 
 /* CONTENT SLIDER */
