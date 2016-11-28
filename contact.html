@@ -1,196 +1,31 @@
-<html lang="#{localeBean.language}"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    
-                     
-                <head>
-  <title>İletişim</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-   <link rel="icon" type="image/jpg" href="img/mopoke.jpg" sizes="16x16"/>
- <link rel="icon" type="image/jpg" href="img/mopoke.jpg" sizes="32x32"/>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- 
-
-                 </head>  
-
-        <h:body>
-         
-
-                
- <nav class="navbar navbar-inverse">
-  <div class="container-fluid"> 
-   
-    
-    <ul class="nav navbar-nav">
-        
-    
-        <li><a href="index.xhtml">MOPOKE</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">KATEGORİLER<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="kitap.xhtml">KİTAP</a></li>
-          <li><a href="film">FİLM</a></li>
-          <li><a href="muzik.xhtml">MÜZİK</a></li>
-   
-        </ul>
-      </li>
-      <li><a href="about.xhtml">HAKKIMIZDA</a></li>
-      <li><a href="contact.xhtml">İLETİŞİM</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      
-     
-        <li><a href="cart.xhtml"><span class="glyphicon glyphicon-shopping-cart"></span>SEPETİM (<h:outputText value="#{cart.cartCount+cart.cartCountm}"/>)</a></li> 
-    
-      <li><a href="register.xhtml"><span class="glyphicon glyphicon-user"></span>KAYDOL</a></li>
-      <li><a href="login.xhtml"><span class="glyphicon glyphicon-log-in"></span>GİRİŞ YAP</a></li>
- 
-
-    </ul>
-  </div>
+<!DOCTYPE html>
+<html>
+  <head>
     <style>
-      .container-fluid {
-          height: 100px;
-          background-color: brown;
-          color: red;
-       
-          }   
-  </style>
-     <style>
-      .navbar navbar-inverse{
-          height: 100px;
-          background-color: brown;
-          color: red;
-       
-          }
-          
-          
-         
-   body {
-      position: relative; 
-      height: 400;
-  }
-  #contact {color: grey; background-color: brown;height: 400;
-   
-  
-   
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
-}
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-} 
-
-  </style>            
- 
- </nav>
-            <div id="test">
-<div id="contact" style="height:300px;width:100%;" class="container-fluid bg-grey">
-  <h2 class="text-center">İLETİŞİM</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Bize yazın</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> ISTANBUL, TÜRKİYE</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +90 544 333 33 33</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> GEWER@gmail.com</p>	   
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="İsim" type="text"> </input>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" > </input>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Düşünceleriniz" rows="5"></textarea><br>
-          </br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Gönder</button>
-        </div>
-      </div>	
-    </div>
-  </div>
-</div>
-   
-
-<div id="googleMap" style="height:400px;width:100%;"> </div>
-</div>
-<!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(40.995614,28.722629);
-
-function initialize() {
-var mapProp = {
-  center:myCenter,
-  zoom:12,
-  scrollwheel:false,
-  draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-    
-<footer>
-  <a href="#" title="To Top">
-  <p>  <span class="glyphicon glyphicon-menu-up"></span> </p> 
-  </a>
-  <p>Design Made By  <a href="https://www.facebook.com/rodi.atas1" title="Visit my facebook page">https://www.facebook.com/rodi.atas1</a></p>		
-</footer>
-
- 
-
- </h:body>
-         
-</html>             
-   
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+  </body>
+</html>
