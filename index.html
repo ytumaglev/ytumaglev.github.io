@@ -12,36 +12,7 @@
 </head>
 
 <body>
-	<script> 
-	  $(window).load(function(){
-  // Wistia handler.
-  wistiaEmbed = document.getElementById( 'player_1' ).wistiaApi;
- 
-  // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
-  $( '.flexslider' )
-    .fitVids()
-    .flexslider({
-      animation: 'slide',
-      useCSS: false,
-      animationLoop: false,
-      smoothHeight: true,
-      start: function( slider ) {
-        $('body').removeClass( 'loading' );
-      },
-      before: function ( slider ) {
-        wistiaEmbed.pause();
-      }
-  });
- 
-  wistiaEmbed.bind( 'play', function() {
-    jQuery( '.flexslider' ).flexslider( 'pause' );
-  });
- 
-  wistiaEmbed.bind( 'end', function() {
-    jQuery( '.flexslider' ).flexslider( 'play' );
-  });
-});
-</script>
+
   <div id="main">
 	  <img src="o_4467ddb7b34ef14b-1.png" alt="Smiley face" style="float:right;width:100px;height:100px;">
   	<h1 style="float:center">Maglev Research Laboratory at <br>
@@ -57,22 +28,7 @@
         <a href="contact.html">Contact Us</a>
     </div>
 
-	  <div class="flexslider">
-  <ul class="slides">
-    <li>
-      <iframe id="player_1" src="http://fast.wistia.com/embed/iframe/t4yniozocs?controlsVisibleOnLoad=true&playerColor=474745&version=v1&videoHeight=366&videoWidth=650&volumeControl=true&videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="650" height="366"></iframe>
-    </li>
-    <li>
-      <img src="http://www.mkt.yildiz.edu.tr/images/images/kisiler/PIC_1954.JPG" />
-    </li>
-    <li>
-      <img src="http://www.mkt.yildiz.edu.tr/images/images/kisiler/PIC_1954.JPG" />
-    </li>
-    <li>
-      <img src="http://www.mkt.yildiz.edu.tr/images/images/kisiler/PIC_1954.JPG" />
-    </li>
-  </ul>
-</div>	  
+  
 	  
 	  
     <div id="contentColumn">
