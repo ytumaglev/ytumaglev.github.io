@@ -1,70 +1,38 @@
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Circles</title>
     <style>
-      html, body, #map-canvas {
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
         height: 100%;
-        margin: 0px;
-        padding: 0px
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
       }
     </style>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={AIzaSyCOiJNIxO3NuMrods7t-A14k6kj4O16wfg }&sensor=false">
-    </script>    <script>
-// This example creates circles on the map, representing
-// populations in the United States.
-
-// First, create an object containing LatLng and population for each city.
-var citymap = {};
-citymap['istanbul'] = {
-  center: new google.maps.LatLng(41.01463, 28.97564    ),
-  population: 1278300
-};
-citymap['ankara'] = {
-  center: new google.maps.LatLng(39.92077, 32.85411),
-  population: 430610
-};
-citymap['izmir'] = {
-  center: new google.maps.LatLng(38.46123, 27.19507),
-  population: 327700
-};var cityCircle;
-
-function initialize() {
-  // Create the map.
-  var mapOptions = {
-    zoom: 6,
-    center: new google.maps.LatLng(39.1667, 35.6667),
-    mapTypeId: google.maps.MapTypeId.ROAD
-  };
-
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  // Construct the circle for each value in citymap.
-  // Note: We scale the population by a factor of 20.
-  for (var city in citymap) {
-    var populationOptions = {
-      strokeColor: '#FF0000',
-      strokeOpacity: 0.8,
-      strokeWeight: 0,
-      fillColor: '#FF0000',
-      fillOpacity: 0.35,
-      map: map,
-      center: citymap[city].center,
-      radius: citymap[city].population / 20
-    };
-    // Add the circle for this city to the map.
-    cityCircle = new google.maps.Circle(populationOptions);
-  }
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
   </head>
   <body>
-    <div id="map-canvas"></div>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOiJNIxO3NuMrods7t-A14k6kj4O16wfg&callback=initMap"
+    async defer></script>
   </body>
 </html>
