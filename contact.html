@@ -1,6 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
 
 	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -67,6 +75,27 @@
                 <td>+902120000000/td>
             </tr>
         </table>
+	    
+	        <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVkUpnuGKK5WjPMC-eyKLBdO6X0sBkt0A&callback=initMap">
+    </script>
+
+	    
     <div id="footer">web development by <a href="https://www.linkedin.com/in/fetullah-ata%C5%9F-2b0326aa?trk=nav_responsive_tab_profile">fetullah atas</a></div>
 	  
 </body>
