@@ -111,9 +111,10 @@ width:441px;
 
 #navColumn
 {
-float:left;
+float:right;
 width:200px;
 padding-top:50px;
+padding-left:30px;	
 }
 #contentColumn p
 {
